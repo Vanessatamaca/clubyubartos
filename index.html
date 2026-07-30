@@ -380,6 +380,117 @@
 .check{
   width:52px;
   height:52px;
+}.sports-offer{
+  background:#f5fbfd;
+}
+
+.offer-heading{
+  max-width:760px;
+  margin-bottom:40px;
+}
+
+.offer-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:28px;
+}
+
+.offer-card{
+  position:relative;
+  padding:38px;
+  border-radius:28px;
+  min-height:430px;
+  box-shadow:0 16px 42px rgba(5,52,76,.09);
+  overflow:hidden;
+}
+
+.offer-card-fins{
+  background:linear-gradient(145deg,#073f5a,#14799f);
+  color:white;
+}
+
+.offer-card-swimming{
+  background:white;
+  border:1px solid #dceef4;
+  color:var(--navy);
+}
+
+.offer-icon{
+  width:68px;
+  height:68px;
+  display:grid;
+  place-items:center;
+  border-radius:20px;
+  background:rgba(255,255,255,.16);
+  font-size:2rem;
+  margin-bottom:24px;
+}
+
+.offer-card-swimming .offer-icon{
+  background:#dff5fb;
+}
+
+.offer-label{
+  display:inline-flex;
+  align-items:center;
+  padding:8px 14px;
+  border-radius:999px;
+  background:rgba(255,255,255,.16);
+  font-size:.78rem;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  margin-bottom:18px;
+}
+
+.upcoming-label{
+  background:#dff5e8;
+  color:#167b45;
+}
+
+.offer-card h3{
+  font-size:clamp(2rem,4vw,3rem);
+  line-height:1.05;
+  margin:0 0 22px;
+}
+
+.offer-card p{
+  font-size:1.05rem;
+  line-height:1.75;
+  margin:0 0 18px;
+}
+
+.offer-card-fins p{
+  color:rgba(255,255,255,.9);
+}
+
+.offer-card-swimming p{
+  color:var(--muted);
+}
+
+@media(max-width:900px){
+  .offer-grid{
+    grid-template-columns:1fr;
+  }
+
+  .offer-card{
+    min-height:auto;
+  }
+}
+
+@media(max-width:620px){
+  .offer-card{
+    padding:28px 24px;
+    border-radius:22px;
+  }
+
+  .offer-card h3{
+    font-size:2.1rem;
+  }
+
+  .offer-card p{
+    font-size:1rem;
+  }
 }
   </style>
 </head>
@@ -497,23 +608,66 @@
     </div>
   </section>
 
-  <section class="section" id="programa">
-    <div class="container program-grid">
-      <article class="program-main">
-        <div>
-          <span class="eyebrow" style="color:#fff">Oferta deportiva</span>
-          <h2>Clases de natación con aletas.</h2>
-          <p>Actualmente, Yubartos concentra su oferta en la enseñanza y entrenamiento de natación con aletas. La asignación del grupo se realiza según valoración técnica, edad y experiencia previa.</p>
-        </div>
-        
-      </article>
-      <div class="program-levels">
-        <article class="level"><span class="level-icon">🌊</span><div><h3>Adaptación e iniciación</h3><p>Familiarización con el agua, respiración, flotación, postura y primeros desplazamientos con aletas.</p></div></article>
-        <article class="level"><span class="level-icon">🐋</span><div><h3>Formación técnica</h3><p>Desarrollo de coordinación, propulsión, velocidad, resistencia, virajes y dominio progresivo de la técnica.</p></div></article>
-        <article class="level"><span class="level-icon">🏅</span><div><h3>Proyección deportiva</h3><p>Entrenamiento estructurado para deportistas con mayor experiencia y objetivos de mejoramiento o competencia.</p></div></article>
-      </div>
+  <section class="section sports-offer" id="programa">
+  <div class="container">
+
+    <div class="offer-heading">
+      <span class="eyebrow">Oferta deportiva</span>
+      <h2>Formación acuática para diferentes etapas.</h2>
+      <p class="section-copy">
+        Nuestra propuesta deportiva integra formación especializada,
+        acompañamiento técnico y desarrollo progresivo de habilidades acuáticas.
+      </p>
     </div>
-  </section>
+
+    <div class="offer-grid">
+
+      <article class="offer-card offer-card-fins">
+        <div class="offer-icon">🏊</div>
+
+        <span class="offer-label">Programa actual</span>
+
+        <h3>Natación con aletas</h3>
+
+        <p>
+          Nos enfocamos en la enseñanza y perfeccionamiento de la natación con
+          aletas mediante una formación técnica progresiva y adaptada a la edad,
+          experiencia y nivel de cada deportista.
+        </p>
+
+        <p>
+          Durante el proceso formativo se incorporan implementos propios de esta
+          disciplina, como el <strong>snorkel frontal</strong>,
+          las <strong>bialetas</strong>, la <strong>monoaleta</strong> y otros
+          elementos especializados que contribuyen al desarrollo de la
+          coordinación, la propulsión, la velocidad, la resistencia y la
+          eficiencia en el medio acuático.
+        </p>
+      </article>
+
+      <article class="offer-card offer-card-swimming">
+        <div class="offer-icon">🌊</div>
+
+        <span class="offer-label upcoming-label">Próximamente</span>
+
+        <h3>Natación</h3>
+
+        <p>
+          Próximamente ampliaremos nuestra oferta deportiva con clases de
+          natación dirigidas a niños, jóvenes y adultos.
+        </p>
+
+        <p>
+          Este programa estará orientado al aprendizaje, fortalecimiento y
+          perfeccionamiento de las habilidades acuáticas, promoviendo la
+          seguridad, la confianza, la correcta ejecución técnica y el disfrute
+          responsable del agua.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
 
   <section class="section schedule" id="horarios">
     <div class="container schedule-grid">
